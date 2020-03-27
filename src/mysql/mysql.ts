@@ -2,8 +2,7 @@ import mysql = require('mysql');
 
 export default class MySQL {
 
-    private static _instance: MySQL;
-
+    private static _instance: MySQL
     cnn: mysql.Connection;
     conectado: boolean = false;
 
@@ -23,11 +22,7 @@ export default class MySQL {
 
     public static get instance() {
 
-        if ( !this._instance ) {
-            this._instance = new this();
-        }
-
-        return this._instance;
+        return this._instance || ( this._instance = new this() );
     }
 
 
