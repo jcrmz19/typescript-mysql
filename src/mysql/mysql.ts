@@ -2,7 +2,7 @@ import mysql = require('mysql');
 
 export default class MySQL {
 
-    private static _instance: mysql.MysqlError;
+    private static _instance: MySQL;
 
     cnn: mysql.Connection;
     conectado: boolean = false;
